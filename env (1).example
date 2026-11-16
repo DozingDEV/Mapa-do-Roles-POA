@@ -1,0 +1,20 @@
+NODE_ENV=development
+PORT=4000
+WEB_ORIGIN=http://localhost:5173
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/mapa_do_role
+DATABASE_SSL=false
+REDIS_URL=
+
+# Generate a different random 32-byte value for each secret below.
+# PowerShell: node --input-type=module -e "import { randomBytes } from 'node:crypto'; console.log(randomBytes(32).toString('base64'))"
+JWT_ACCESS_SECRET_BASE64=REPLACE_WITH_RANDOM_BASE64_SECRET
+DATA_ENCRYPTION_KEYS_JSON='{"1":"REPLACE_WITH_RANDOM_BASE64_KEY"}'
+ACTIVE_DATA_ENCRYPTION_KEY_VERSION=1
+EMAIL_LOOKUP_KEYS_JSON='{"1":"REPLACE_WITH_DIFFERENT_RANDOM_BASE64_KEY"}'
+ACTIVE_EMAIL_LOOKUP_KEY_VERSION=1
+
+# Set TRUST_PROXY_HOPS=1 only when the API is reachable exclusively through
+# one trusted reverse proxy that overwrites X-Forwarded-* headers.
+TRUST_PROXY_HOPS=0
+TLS_KEY_PATH=
+TLS_CERT_PATH=
